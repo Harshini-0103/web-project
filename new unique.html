@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>TheHerbNest</title>
+  <link rel="icon" href="herbnest-logo-botanical-organic-brand_1113802-1704.avif" />
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body{
+      font-family: 'Poppins';
+      background: linear-gradient(135deg, #d4f1f4 0%, #0b486b 100%);
+      color: #053742;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 30px;}
+
+    h1{
+      font-size: 4rem;
+      color: #f4f9f9;
+      margin-bottom: 0.2rem;
+      font-weight: 700;
+      text-align: center;
+      max-width: 900px}
+
+    i{
+      color: #054964;
+      font-style: italic;
+      font-size: 1.4rem;
+      margin-bottom: 30px;
+      font-weight: 500;
+      max-width: 900px;
+      text-align: center;}
+      
+    .herbs-container{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      width: 100%;}
+
+    .herb-card{
+      background: #fefefe;
+      border-radius: 16px;
+      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;}
+
+    .herb-card:hover{
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(19, 18, 18, 0.3);}
+
+    .herb-image{
+      width: 100%;
+      object-fit: cover;
+    aspect-ratio:4/3;
+      transition: transform 0.3s ease;}
+
+    .herb-card:hover .herb-image{
+      transform: scale(1.05);}
+
+    .herb-content {
+      padding: 20px 25px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;}
+
+    .herb-title{
+      font-size: 1.8rem;
+      color: #264653;
+      margin-bottom: 10px;
+      font-weight: 700;
+      letter-spacing: 1.1px;}
+
+    .herb-desc {
+      flex-grow: 1;
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 20px;}
+
+    .button-link {
+      align-self: flex-start;
+      padding: 12px 28px;
+      background: linear-gradient(135deg, #2a9d8f 0%);
+      color: #f4f9f9;
+      font-weight: 600;
+      font-size: 1rem;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 6px 18px rgba(38, 70, 83, 0.5);
+      transition: all 0.3s ease;
+      display: inline-block;}
+
+    .button-link:hover,
+    .button-link:focus {
+      background: linear-gradient(135deg, #264653 0%);
+      box-shadow: 0 10px 25px rgba(38, 70, 83, 0.7);
+      transform: translateY(-3px);}
+
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      width: 100%;}
+
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 90%;
+      max-width: 260px;
+      background-color: #2a9d8f;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 8px 12px;
+      position: absolute;
+      z-index: 10;
+      bottom: 110%;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity 0.25s ease;
+      font-size: 0.9rem;} 
+
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1; } 
+
+    @media (max-width: 600px) {
+      h1 { font-size: 3rem; }
+      .herb-title { font-size: 1.5rem; }
+      .button-link { font-size: 0.9rem; padding: 10px 20px; }}
+  </style>
+</head>
+<body>
+
+  <h1>The Herb Nest</h1>
+  <i>Where Every Leaf Tells a Story</i>
+
+  <div class="herbs-container">
+
+    <div class="herb-card">
+      <div class="tooltip">
+        <a href="https://www.youtube.com/watch?v=uhYnR1ciT7M" target="_blank">
+          <img src="Thai-Basil-Flowering.jpg" alt="Basil plant" class="herb-image" />
+        </a>
+        <span class="tooltiptext">Click image for basil benefits video!</span>
+      </div>
+      <div class="herb-content">
+        <h2 class="herb-title">Basil</h2>
+        <p class="herb-desc">Basil is a fragrant herb commonly used in cooking, known for its anti-inflammatory and antioxidant properties.</p>
+        <a class="button-link" href="basil.html" target="_blank">Learn here!!</a>
+      </div>
+    </div>
+
+    <div class="herb-card">
+      <div class="tooltip">
+        <a href="https://www.youtube.com/watch?v=mTgZHsXRwa8" target="_blank">
+          <img src="thyme.jfif" alt="Thyme herb" class="herb-image" />
+        </a>
+        <span class="tooltiptext">Click image for thyme benefits video!</span>
+      </div>
+      <div class="herb-content">
+        <h2 class="herb-title">Thyme</h2>
+        <p class="herb-desc">Thyme is a versatile herb that supports respiratory health and acts as a natural antiseptic.</p>
+        <a class="button-link" href="thyme.html" target="_blank">Learn here!!</a>
+      </div>
+    </div>
+
+<div class="herb-card">
+    <div class="tooltip">
+      <img src="Rosemaryyyyyy.avif" alt="Rosemary" class="herb-image" usemap="#rosemarymap" />
+      <span class="tooltiptext">Click the highlighted area for rosemary benefits video!</span>
+    </div>
+    <map name="rosemarymap" id="rosemarymap">
+      <area shape="rect" coords="89,93,239,173" href="https://www.youtube.com/watch?v=IBvUJluIBu0" alt="benefits of rosemary" target="_blank" />
+    </map>
+    <div class="herb-content">
+      <h2 class="herb-title">Rosemary</h2>
+      <p class="herb-desc">Rosemary improves memory, boosts immune function, and promotes healthy digestion.</p>
+      <a class="button-link" href="rose.html" target="_blank" data-herb="Rosemary">Learn here!!</a>
+    </div>
+  </div>
+
+  <div class="herb-card">
+    <div class="tooltip">
+      <img src="cilantro.jfif" alt="Cilantro" class="herb-image" usemap="#cilantromap" />
+      <span class="tooltiptext">Click the highlighted area for cilantro benefits video!</span>
+    </div>
+    <map name="cilantromap" id="cilantromap">
+      <area shape="rect" coords="25,20,189,193" href="https://www.youtube.com/watch?v=jlaelYqV94o" alt="benefits of cilantro" target="_blank" />
+    </map>
+    <div class="herb-content">
+      <h2 class="herb-title">Cilantro</h2>
+      <p class="herb-desc">Cilantro detoxifies heavy metals and supports digestion with its antimicrobial properties.</p>
+      <a class="button-link" href="cilantro.html" target="_blank" data-herb="Cilantro">Learn here!!</a>
+    </div>
+  </div>
+    
+    <div class="herb-card">
+        <div class="tooltip">
+          <img src="mint.jfif" alt="Mint" class="herb-image" usemap="#mintmap" />
+          <span class="tooltiptext">Click the highlighted area for mint benefits video!</span>
+        </div>
+        <map name="mintmap" id="mintmap">
+          <area shape="rect" coords="10,10,300,220" href="https://www.youtube.com/watch?v=olAa454ReHA" alt="benefits of mint" target="_blank" />
+        </map>
+        <div class="herb-content">
+          <h2 class="herb-title">Mint</h2>
+          <p class="herb-desc">Mint aids digestion, relieves headaches, and freshens breath with its cooling properties.</p>
+          <a class="button-link" href="mint.html" target="_blank" data-herb="Mint">Learn here!!</a>
+        </div>
+      </div>
+    
+    
+      <div class="herb-card">
+        <div class="tooltip">
+          <img src="lavender.jpg" alt="Lavender" class="herb-image" usemap="#lavendermap" />
+          <span class="tooltiptext">Click the highlighted area for lavender benefits video!</span>
+        </div>
+        <map name="lavendermap" id="lavendermap">
+          <area shape="rect" coords="15,20,280,210" href="https://www.youtube.com/watch?v=bTMPWXZfeoY" alt="benefits of lavender" target="_blank" />
+        </map>
+        <div class="herb-content">
+          <h2 class="herb-title">Lavender</h2>
+          <p class="herb-desc">Lavender promotes relaxation, reduces anxiety, and helps improve sleep quality.</p>
+          <a class="button-link" href="lavender.html" target="_blank" data-herb="Lavender">Learn here!!</a>
+        </div>
+      </div>
+    
+      <div class="herb-card">
+        <div class="tooltip">
+          <img src="Oregano-Leaf-Product-Pic.jpg" alt="Oregano" class="herb-image" usemap="#oreganomap" />
+          <span class="tooltiptext">Click the highlighted area for oregano benefits video!</span>
+        </div>
+        <map name="oreganomap" id="oreganomap">
+          <area shape="rect" coords="20,15,290,200" href="https://www.youtube.com/watch?v=Xvd0pE4dcdc" alt="benefits of oregano" target="_blank" />
+        </map>
+        <div class="herb-content">
+          <h2 class="herb-title">Oregano</h2>
+          <p class="herb-desc">Oregano is rich in antioxidants, supports immune health, and has antibacterial properties.</p>
+          <a class="button-link" href="oregano.html" target="_blank" data-herb="Oregano">Learn here!!</a>
+        </div>
+      </div>
+
+<div class="herb-card">
+    <div class="tooltip">
+      <img src="cha.jpg" alt="Chamomile" class="herb-image" usemap="#chamomilemap" />
+      <span class="tooltiptext">Click the highlighted area for chamomile benefits video!</span>
+    </div>
+    <map name="chamomilemap" id="chamomilemap">
+      <area shape="rect" coords="10,10,280,210" href="https://www.youtube.com/watch?v=gzpwzEGtvq8" alt="benefits of chamomile" target="_blank" />
+    </map>
+    <div class="herb-content">
+      <h2 class="herb-title">Chamomile</h2>
+      <p class="herb-desc">Chamomile is known for its calming effects, helps reduce anxiety, promotes sleep, and soothes digestive issues.</p>
+      <a class="button-link" href="chamomile.html" target="_blank" data-herb="Chamomile">Learn here!!</a>
+    </div>
+  </div>
+
+<div class="herb-card">
+    <div class="tooltip">
+      <img src="lemon.webp" alt="Lemon Balm" class="herb-image" usemap="#lemonbalmap" />
+      <span class="tooltiptext">Click the highlighted area for lemon balm benefits video!</span>
+    </div>
+    <map name="lemonbalmap" id="lemonbalmap">
+      <area shape="rect" coords="15,15,280,210" href="https://www.youtube.com/watch?v=adTD6lh5A2M" alt="benefits of lemon balm" target="_blank" />
+    </map>
+    <div class="herb-content">
+      <h2 class="herb-title">Lemon Balm</h2>
+      <p class="herb-desc">Lemon balm helps reduce stress and anxiety, improves sleep, and supports digestive health.</p>
+      <a class="button-link" href="lemonbalm.html" target="_blank" data-herb="Lemon Balm">Learn here!!</a>
+    </div>
+  </div>
+
+  <div class="herb-card">
+    <div class="tooltip">
+      <a href="https://www.youtube.com/watch?v=CnpFRSmrcKo" target="_blank">
+        <img src="parsley cover.webp" alt="Parsley herb" class="herb-image" />
+      </a>
+      <span class="tooltiptext">Click image for parsley benefits video!</span>
+    </div>
+    <div class="herb-content">
+      <h2 class="herb-title">Parsley</h2>
+      <p class="herb-desc">Parsley is a nutrient-rich herb that offers several health benefits due to its high content of vitamins, minerals, and antioxidants.</p>
+      <a class="button-link" href="parsely.html" target="_blank">Learn here!!</a>
+    </div>
+  </div>
+
+
+<div class="herb-card">
+  <div class="tooltip">
+    <a href="https://www.youtube.com/shorts/A2xvQ5OBgTM" target="_blank">
+      <img src="dill cover img.webp" alt="Parsley herb" class="herb-image" />
+    </a>
+    <span class="tooltiptext">Click image for dill benefits video!</span>
+  </div>
+  <div class="herb-content">
+    <h2 class="herb-title">Dill</h2>
+    <p class="herb-desc">Dill, scientifically known as Anethum graveolens, is an annual herb from the celery family (Apiaceae) cultivated for its leaves and seeds, which are used as a herb or spice. It's known for its distinct flavor profile, often described as a combination of fennel, celery, and anise with slightly bitter undertones. .</p>
+    <a class="button-link" href="dill.html" target="_blank">Learn here!!</a>
+  </div>
+</div>
+
+<div class="herb-card">
+  <div class="tooltip">
+    <a href="https://www.youtube.com/shorts/edtEjeLBDLg" target="_blank">
+      <img src="chive cover.webp" alt="Parsley herb" class="herb-image" />
+    </a>
+    <span class="tooltiptext">Click image for chives benefits video!</span>
+  </div>
+  <div class="herb-content">
+    <h2 class="herb-title">chives</h2>
+    <p class="herb-desc"> Chives are a perennial herb with long, slender, green leaves and purple-pink flowers. They belong to the onion family (Allium) and are known for their mild, onion-like flavor. Chives are used as a culinary herb and are also a good source of vitamins A and C, as well as other nutrients like calcium, iron, and potassium. </p>
+    <a class="button-link" href="chive.html" target="_blank">Learn here!!</a>
+  </div>
+</div>
+
+
+
+
+
+
+  </div>
+
+  <footer style="margin-top: 60px; padding: 30px 20px; background-color: #0b486b; color: #f4f9f9; text-align: center; border-radius: 12px; max-width: 900px; width: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
+    <h2 style="font-size: 1.6rem; margin-bottom: 15px;">More About The Herb Nest</h2>
+    <p style="font-size: 1rem; line-height: 1.6; max-width: 800px; margin: 0 auto;">
+      The Herb Nest is a curated hub for herb lovers, health enthusiasts, and nature admirers. Whether you're new to herbal wellness or a seasoned green thumb, we bring you the power of herbs through education, imagery, and inspiration.
+      <br><br>
+      Want to grow your own herbal garden? Each herb on this page includes its health benefits, links to educational videos, and tips to use them effectively.
+      <br><br>
+      Stay connected for more updates, recipes, and seasonal planting guides.
+    </p>
+    <p style="margin-top: 20px; font-size: 0.9rem; color: #a0d8ef;">&copy; 2025 The Herb Nest..</p>
+  </footer>
+
+</body>
+</html>
